@@ -44,7 +44,7 @@
 	#define ND (double)NMOL/(double)(XCELL*XCELL)
 	#define MAXTIME 4010
 	//#define MAXTIME (1.0e5/pow(ND,1.0/2.0))
-	#define rr 0.5
+	#define rr 0.4
  	#define cutoffvel 0.0001
 	#define pi 4.0*atan(1.0)
 	#define UPDATETIME 10.0
