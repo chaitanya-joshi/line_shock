@@ -44,7 +44,7 @@
 	#define ND (double)NMOL/(double)(XCELL*XCELL)
 	#define MAXTIME 4010
 	//#define MAXTIME (1.0e5/pow(ND,1.0/2.0))
-	#define rr 0.4
+	#define rr 0.5
  	#define cutoffvel 0.0001
 	#define pi 4.0*atan(1.0)
 	#define UPDATETIME 10.0
@@ -137,7 +137,7 @@
 						histtempsave[i*XCELL + j] = (double)hist[i*XCELL + j]*RUNS/run;
 						histstddevtemp[i*XCELL + j] = (double)histstddev[i*XCELL + j]*RUNS/run;
 						histstddevtemp[i*XCELL + j] = histstddevtemp[i*XCELL + j] - histtempsave[i*XCELL + j]*histtempsave[i*XCELL + j];
-						histstddevtemp[i*XCELL + j] = sqrt(histstddevtemp[i*XCELL + j]);
+						histstddevtemp[i*XCELL + j] = sqrt((double)histstddevtemp[i*XCELL + j]/run); // Dividing by sqrt(run) to fix standard deviation
 					}
 				}
 				// Currently, histstddev is <xi**2>. Subtracting <xi>**2 from it and taking sqrt
