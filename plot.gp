@@ -3,8 +3,6 @@ set ylabel 'y-axis'
 #set lmargin screen 0
 #set rmargin screen 1
 set key samplen 2 spacing .8 font ",6"
-#a = 0.45
-#b = -0.12
 a = 0.0
 b = 0.0
 #plot [-x:+x] 'datafile.dat' u ($1):($2) w l title '$legend$'
